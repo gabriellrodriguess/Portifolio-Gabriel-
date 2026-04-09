@@ -1,24 +1,15 @@
-const screen = document.querySelector(".screen");
-const items = document.querySelectorAll(
-  ".card, .project-card, .skills span, .contact-item, .hero-actions a"
-);
+// animação simples
+const cards = document.querySelectorAll(".project-card");
 
-items.forEach((item) => {
-  item.style.opacity = "0";
-  item.style.transform = "translateY(18px)";
+cards.forEach(card => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(20px)";
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-      entry.target.style.transition = "all 0.5s ease";
-    }
+setTimeout(() => {
+  cards.forEach(card => {
+    card.style.transition = "0.5s";
+    card.style.opacity = "1";
+    card.style.transform = "translateY(0)";
   });
-}, {
-  root: screen,
-  threshold: 0.12
-});
-
-items.forEach((item) => observer.observe(item));
+}, 300);
