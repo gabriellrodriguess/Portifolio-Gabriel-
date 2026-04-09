@@ -4,44 +4,25 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Inter", sans-serif;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top, #153b82 0%, #091427 35%, #020617 100%);
+  background: radial-gradient(circle at top, #133a7c, #020617);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  color: #ffffff;
+  height: 100vh;
+  color: #fff;
 }
 
-.page {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
+/* iPhone */
 .iphone {
-  width: 410px;
-  max-width: 100%;
-}
-
-.iphone-frame {
-  position: relative;
-  width: 100%;
-  height: 840px;
-  background: linear-gradient(180deg, #0c0c0c, #020202);
-  border: 2px solid #2a2a2a;
-  border-radius: 56px;
+  width: 390px;
+  height: 820px;
+  background: #000;
+  border-radius: 50px;
   padding: 12px;
-  box-shadow:
-    0 30px 90px rgba(0, 0, 0, 0.70),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
 }
 
 .dynamic-island {
@@ -49,227 +30,118 @@ body {
   top: 18px;
   left: 50%;
   transform: translateX(-50%);
-  width: 132px;
-  height: 34px;
-  border-radius: 999px;
-  background: #000000;
-  z-index: 30;
+  width: 120px;
+  height: 32px;
+  background: #000;
+  border-radius: 20px;
 }
 
+/* Tela */
 .screen {
   width: 100%;
   height: 100%;
-  border-radius: 44px;
+  border-radius: 40px;
   overflow-y: auto;
-  padding: 72px 18px 28px;
-  background:
-    radial-gradient(circle at top, rgba(39, 111, 255, 0.20), transparent 26%),
-    linear-gradient(180deg, #041224 0%, #020817 100%);
-  scrollbar-width: none;
+  padding: 70px 16px 20px;
+  background: linear-gradient(#051125, #020817);
 }
 
-.screen::-webkit-scrollbar {
-  display: none;
-}
-
+/* HERO */
 .hero {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .photo-ring {
-  width: 142px;
-  height: 142px;
-  margin: 0 auto 18px;
+  width: 140px;
+  height: 140px;
+  margin: auto;
   padding: 4px;
   border-radius: 50%;
-  background: linear-gradient(180deg, #48a5ff, #0f56e8);
-  box-shadow:
-    0 0 0 7px rgba(72, 165, 255, 0.08),
-    0 0 40px rgba(72, 165, 255, 0.24);
+  background: linear-gradient(#3ea1ff, #0f4fd8);
 }
 
 .profile-photo {
   width: 100%;
   height: 100%;
-  display: block;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 22%;
-  background: #0b1220;
+  object-position: center 25%;
 }
 
 .hero h1 {
-  font-size: 34px;
-  line-height: 1.08;
-  font-weight: 800;
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  font-size: 28px;
+  margin-top: 10px;
 }
 
 .role {
-  color: #3291ff;
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  color: #2f8dff;
 }
 
 .stack {
-  color: #9caec8;
-  font-size: 14px;
-  margin-bottom: 14px;
+  font-size: 13px;
+  color: #aaa;
 }
 
 .intro {
-  max-width: 300px;
-  margin: 0 auto 18px;
-  color: #d6deea;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.hero-actions a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 11px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  transition: 0.25s ease;
-}
-
-.hero-actions a:hover {
-  transform: translateY(-2px);
-  background: rgba(50, 145, 255, 0.16);
-  border-color: rgba(50, 145, 255, 0.26);
-}
-
+/* PROJETOS */
 .section {
-  margin-bottom: 28px;
-}
-
-.section h2 {
-  font-size: 21px;
-  font-weight: 800;
-  margin-bottom: 14px;
-}
-
-.card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.05));
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-}
-
-.card p {
-  color: #d6deea;
-  font-size: 15px;
-  line-height: 1.7;
+  margin-top: 20px;
 }
 
 .project-card {
+  background: #0d1c33;
+  border-radius: 16px;
   overflow: hidden;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(15, 29, 54, 0.98), rgba(9, 19, 36, 0.98));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
-  margin-bottom: 14px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.project-card:last-child {
-  margin-bottom: 0;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(50, 145, 255, 0.25);
+  margin-bottom: 15px;
 }
 
 .project-card img {
   width: 100%;
-  height: 185px;
-  display: block;
+  height: 160px;
   object-fit: cover;
 }
 
 .project-content {
-  padding: 15px;
-}
-
-.tag {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: rgba(50, 145, 255, 0.12);
-  color: #9fd1ff;
-  font-size: 11px;
-  font-weight: 700;
+  padding: 12px;
 }
 
 .project-content h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .project-content p {
-  color: #c8d3e2;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 12px;
+  font-size: 13px;
+  margin-bottom: 8px;
 }
 
 .project-content a {
-  color: #3291ff;
+  color: #2f8dff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
 }
 
-.skills {
+/* CONTATO */
+.contact-icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
-.skills span {
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-size: 13px;
-  color: #eef4ff;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.contact-list {
+.contact-icons a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-item {
-  display: grid;
-  grid-template-columns: 38px 1fr 18px;
   align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: #ffffff;
-  padding: 15px 16px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
-  border: 1px solid rgba(255,255,255,0.07);
-  transition: 0.25s ease;
+  justify-content: center;
 }
 
-.contact-item:hover {
+.contact-icons img {
+  width: 28px;
+}
